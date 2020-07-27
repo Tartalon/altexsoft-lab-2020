@@ -17,9 +17,17 @@ namespace task
             Console.WriteLine(fileText);
             Console.WriteLine("Укажите слово, символ");
             string word = Console.ReadLine();
-            string changeText = fileText.Replace(word, "");
-            Console.WriteLine(changeText);
-            File.WriteAllText("changeText.txt", changeText);
+            if (fileText.Contains(word))
+            {
+                Console.WriteLine("True");
+                string changeText = fileText.Replace(word, "");
+                Console.WriteLine(changeText);
+                File.WriteAllText("changeText.txt", changeText);
+            } else
+            {
+                Console.WriteLine("Такого слова/символа в даном тексте нету");
+            }
+            
         }
     }
 }
