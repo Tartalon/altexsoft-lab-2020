@@ -20,8 +20,6 @@ namespace task
             string changeText = fileText.Replace(word, "");
             Console.WriteLine(changeText);
             File.WriteAllText("changeText.txt", changeText);
-            Console.ReadKey();
-
         }
     }
 }
